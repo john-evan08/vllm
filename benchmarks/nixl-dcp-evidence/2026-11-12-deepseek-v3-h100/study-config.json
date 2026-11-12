@@ -1,0 +1,42 @@
+{
+  "study": "deepseek-v3-h100-mixed-dcp16-v1",
+  "model_repository": "deepseek-ai/DeepSeek-V3",
+  "model_revision": "e815299b0bcbac849fa540c768ef21845365c9eb",
+  "served_model": "deepseek-v3",
+  "source_commit": "b1ba99ec247b2c85821b025603740f4062b5082b",
+  "nodes": 2,
+  "gpus_per_node": 8,
+  "input_tokens": [8192, 65536, 122880],
+  "concurrencies": [1, 4, 16, 32],
+  "output_tokens": 512,
+  "warmup_output_tokens": 32,
+  "seed": 42,
+  "sampling_seed": 0,
+  "passes": [["nccl", 1], ["nixl", 1], ["nixl", 2], ["nccl", 2]],
+  "server_args": [
+    "--dtype", "bfloat16", "--quantization", "fp8", "--kv-cache-dtype", "bfloat16",
+    "--tensor-parallel-size", "16", "--decode-context-parallel-size", "16",
+    "--data-parallel-size", "1", "--pipeline-parallel-size", "1",
+    "--prefill-context-parallel-size", "1", "--enable-expert-parallel",
+    "--dcp-comm-backend", "a2a", "--no-dcp-q-replicate",
+    "--dcp-kv-cache-interleave-size", "1", "--block-size", "64",
+    "--distributed-executor-backend", "mp", "--nnodes", "2",
+    "--attention-backend", "FLASHMLA", "--moe-backend", "deep_gemm",
+    "--all2all-backend", "allgather_reducescatter",
+    "--max-model-len", "131072", "--max-num-batched-tokens", "16384",
+    "--max-num-seqs", "32", "--enable-chunked-prefill", "--async-scheduling",
+    "--no-enable-prefix-caching", "--kv-cache-memory-bytes", "17179869184",
+    "--disable-custom-all-reduce", "--seed", "0",
+    "--kernel-config", "{\"enable_flashinfer_autotune\":false}",
+    "--compilation-config", "{\"cudagraph_mode\":\"PIECEWISE\",\"cudagraph_capture_sizes\":[1,2,4,8,16,32]}"
+  ],
+  "environment": {
+    "VLLM_USE_DIRECT_DCP_A2A": "0",
+    "VLLM_USE_DIRECT_DCP_Q_GATHER": "0",
+    "VLLM_USE_DIRECT_DCP_KV_GATHER": "0",
+    "VLLM_ALLREDUCE_USE_SYMM_MEM": "0",
+    "NCCL_NET": "IB",
+    "NCCL_DEBUG": "INFO",
+    "UCX_LOG_LEVEL": "info"
+  }
+}

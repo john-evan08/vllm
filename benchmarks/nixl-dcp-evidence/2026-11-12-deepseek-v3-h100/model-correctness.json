@@ -1,0 +1,573 @@
+{
+  "passed": true,
+  "method": "single-instance-standard-nccl-nixl-nccl",
+  "numerical": {
+    "prompts": 9,
+    "exact_generations": 9,
+    "comparable_steps": 288,
+    "max_logprob_delta": 0.0,
+    "prompt_mean_logprob_deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "first_divergences": [],
+    "tolerances": {
+      "max_logprob_delta": 0.5,
+      "per_prompt_mean_logprob_delta": 0.1,
+      "first_divergence_greedy_gap": 0.25
+    }
+  },
+  "nccl_restoration_exact": true,
+  "checker_sha256": {
+    "nixl_dsv3_switch.py": "1781c2698e8da9275ae4879c3c9a25c7ae7ad46a7ab8140ac2aa64607b456303",
+    "nixl_dsv3.py": "3f9daaec1d3a9a03643777abe6ac048633200e40be39471c60c2a974f7f832dc",
+    "nixl_rdma_model.py": "dbccf356224aa77f3c8f3f567af24feaa5887d24c91bab03c974a3f23eae76fa",
+    "check_p2p_smoke.py": "75d01e7b299265f1837823156246bcd272386b18a6eedb562bc8808edcd65058",
+    "check_nixl_smoke.py": "428e90e57cb114477a53c0d818fb9528db02d83557dddf37f6f70871c00ec207"
+  },
+  "scope": "Nine sequential full-model generation cases with identical initialized weights and communicators; standard production DCP functions; inactive NIXL registration retained in NCCL correctness arms. Bounded batch4/16/32 dispatch traces. Timing uses fresh servers without switching.",
+  "limitation": "Fresh-server numerical variation exists in both backends; this is a bounded integration check, not a model accuracy evaluation.",
+  "worker_kernel_counts": {
+    "nccl": [
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      }
+    ],
+    "nixl": [
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1586,
+        "nixl_fused_send": 1586,
+        "nixl_combine": 1586,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      }
+    ],
+    "nccl-restored": [
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      },
+      {
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1586,
+        "dcp_unpack": 1586
+      }
+    ]
+  }
+}

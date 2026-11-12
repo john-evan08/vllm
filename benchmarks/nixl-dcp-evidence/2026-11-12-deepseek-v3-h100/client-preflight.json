@@ -1,0 +1,6 @@
+{
+  "aiperf": "0.12.0",
+  "tokenizer": "deepseek-ai/DeepSeek-V3",
+  "revision": "e815299b0bcbac849fa540c768ef21845365c9eb",
+  "passed": true
+}

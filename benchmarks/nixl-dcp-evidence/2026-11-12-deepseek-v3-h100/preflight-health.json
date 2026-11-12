@@ -1,0 +1,107 @@
+{
+  "scope": "Untimed replacement-pair qualification and sustained-load pilots",
+  "pilots": [
+    {
+      "backend": "nccl",
+      "scope": "Untimed sizing and sustained model-load health preflight",
+      "long_waves": 2,
+      "long_input_tokens": [
+        65536,
+        122880
+      ],
+      "output_tokens": 512,
+      "performance_eligible": false
+    },
+    {
+      "backend": "nixl",
+      "scope": "Untimed sizing and sustained model-load health preflight",
+      "long_waves": 2,
+      "long_input_tokens": [
+        65536,
+        122880
+      ],
+      "output_tokens": 512,
+      "performance_eligible": false
+    }
+  ],
+  "telemetry_by_node": [
+    {
+      "passed": true,
+      "scope": "Full-allocation sampled telemetry; normal power caps allowed",
+      "devices": {
+        "0": {
+          "samples": 437,
+          "max_temperature_c": 61
+        },
+        "1": {
+          "samples": 437,
+          "max_temperature_c": 66
+        },
+        "2": {
+          "samples": 437,
+          "max_temperature_c": 72
+        },
+        "3": {
+          "samples": 437,
+          "max_temperature_c": 70
+        },
+        "4": {
+          "samples": 437,
+          "max_temperature_c": 64
+        },
+        "5": {
+          "samples": 437,
+          "max_temperature_c": 60
+        },
+        "6": {
+          "samples": 437,
+          "max_temperature_c": 72
+        },
+        "7": {
+          "samples": 437,
+          "max_temperature_c": 75
+        }
+      },
+      "faults": []
+    },
+    {
+      "passed": true,
+      "scope": "Full-allocation sampled telemetry; normal power caps allowed",
+      "devices": {
+        "0": {
+          "samples": 440,
+          "max_temperature_c": 61
+        },
+        "1": {
+          "samples": 440,
+          "max_temperature_c": 63
+        },
+        "2": {
+          "samples": 440,
+          "max_temperature_c": 75
+        },
+        "3": {
+          "samples": 440,
+          "max_temperature_c": 71
+        },
+        "4": {
+          "samples": 440,
+          "max_temperature_c": 67
+        },
+        "5": {
+          "samples": 440,
+          "max_temperature_c": 61
+        },
+        "6": {
+          "samples": 440,
+          "max_temperature_c": 73
+        },
+        "7": {
+          "samples": 440,
+          "max_temperature_c": 72
+        }
+      },
+      "faults": []
+    }
+  ]
+}

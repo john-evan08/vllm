@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "manifest_sha256": "5b64bcf790828670e31f2274e06ea53cab95ff3e14b0316ea2007c20e9ac4def",
+  "repository": "deepseek-ai/DeepSeek-V3",
+  "revision": "e815299b0bcbac849fa540c768ef21845365c9eb",
+  "purpose": "ancillary files only; runtime weights/config/tokenizer unchanged",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "git_blob": "a6344aac8c09253b3b630fb776ae94478aa0275b"
+    },
+    {
+      "path": "figures/benchmark.png",
+      "bytes": 183581,
+      "sha256": "f3d639a39f1e264ace9ba5974e3a51b51de8c69419fa936457b1c19e0e1898e9",
+      "git_blob": "d7ee0c05253c7f92a8fc0bdd177c257fed85ceba"
+    },
+    {
+      "path": "figures/niah.png",
+      "bytes": 108471,
+      "sha256": "07e47990795feb14f8aa82eb2790222b5ee98a9400ae0b63214fb4af078a53c4",
+      "git_blob": "2a2e920641405b0223e9e7777ec41dc0a899fd30"
+    },
+    {
+      "path": "inference/configs/config_16B.json",
+      "bytes": 417,
+      "sha256": "610c665cf8e1fb0cdf9f2ab68833c1490cef7b1ef8cc8476a035b8ae38522179",
+      "git_blob": "2aa647753e617f65f135dcd17b63d03a2b636027"
+    },
+    {
+      "path": "inference/configs/config_236B.json",
+      "bytes": 455,
+      "sha256": "49db711e7c0b96dadd837a8830ae3cc0b9ad456087f0de313f955ec49539dc69",
+      "git_blob": "389b3126068b31736250761860fd74329e32f1ad"
+    },
+    {
+      "path": "inference/configs/config_671B.json",
+      "bytes": 503,
+      "sha256": "d21d797509598ffaa7c22686abdf3a94e38f31a6193dc158fffe0a6fb6ef5010",
+      "git_blob": "48b5c719f37e013a70bb0e87b842ee4f478a7ebf"
+    },
+    {
+      "path": "inference/convert.py",
+      "bytes": 3246,
+      "sha256": "7b6a9561b830c0a04839242ade7033e002276919373ef26618ef927c9fb4ac59",
+      "git_blob": "9a7ea90b03b411ad58bfa4c14388ab735ea40c4b"
+    },
+    {
+      "path": "inference/fp8_cast_bf16.py",
+      "bytes": 3241,
+      "sha256": "5a0c44feadf96a26328f9cbf6f732761e70dbf52f23a92b8fa0083355203152e",
+      "git_blob": "5369bdf3c77136ec243dfc5c74f6e2047638d78e"
+    },
+    {
+      "path": "inference/generate.py",
+      "bytes": 5392,
+      "sha256": "0eb4575482db09f132572827e06b8bd7c0e5967e3832cc7c0b685acccd59497e",
+      "git_blob": "a08c7bdb797f50906a21da0815888b3d16ca36fa"
+    },
+    {
+      "path": "inference/kernel.py",
+      "bytes": 4330,
+      "sha256": "6bccb9593745c14334443e56ba05a4b76bbd24520dd213e8be1e912708609ab7",
+      "git_blob": "19e8f8f63e51b483d4a903d00324bc643f951edd"
+    },
+    {
+      "path": "inference/model.py",
+      "bytes": 17556,
+      "sha256": "123a476dfd6b18c17869cacf02800236bed701000ef620d36b81c577ddcabdd5",
+      "git_blob": "5e3eac134eddf0b4a2117e11f5f153b2219e209b"
+    },
+    {
+      "path": "inference/requirements.txt",
+      "bytes": 66,
+      "sha256": "e5ba1286ec78fb919fbbca62d24757b289aea58b7499faf8b8d7c6e1fd4ea27c",
+      "git_blob": "68a60d0f430c20f192e366e8e01735ff4695e4a0"
+    }
+  ]
+}

@@ -1,0 +1,1350 @@
+[
+  {
+    "backend": "nccl",
+    "repetition": 1,
+    "controls": {
+      "dtype": "torch.bfloat16",
+      "quantization": "fp8",
+      "max_model_len": 131072,
+      "kv_dtype": "bfloat16",
+      "kv_budget": 17179869184,
+      "prefix_caching": false,
+      "max_batched_tokens": 16384,
+      "max_seqs": 32,
+      "attention_backend": "AttentionBackendEnum.FLASHMLA",
+      "moe_backend": "deep_gemm",
+      "graph_mode": "PIECEWISE",
+      "graph_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "dp": 1,
+      "pp": 1,
+      "pcp": 1,
+      "ep": true,
+      "use_all2all": false,
+      "q_replicate": false
+    },
+    "observability": {
+      "watchdog_enabled": true,
+      "watchdog_timeout_seconds": 30,
+      "watchdog_poll_seconds": 5
+    },
+    "kv_capacity_per_rank": {
+      "num_blocks": 3819,
+      "allocated_bytes": 17175601152,
+      "groups": [
+        {
+          "layers": 61,
+          "block_size": 64,
+          "spec": "MLAAttentionSpec"
+        }
+      ]
+    },
+    "memory_by_rank": [
+      {
+        "rank": 0,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15802171392,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 1,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15768616960,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 2,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15810560000,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 3,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15777005568,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 4,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15816851456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 5,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15783297024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 6,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15816851456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 7,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15791685632,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 8,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15768616960,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 9,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15802171392,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 10,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15777005568,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 11,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15810560000,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 12,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15783297024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 13,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15816851456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 14,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15783297024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 15,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15825240064,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      }
+    ]
+  },
+  {
+    "backend": "nixl",
+    "repetition": 1,
+    "controls": {
+      "dtype": "torch.bfloat16",
+      "quantization": "fp8",
+      "max_model_len": 131072,
+      "kv_dtype": "bfloat16",
+      "kv_budget": 17179869184,
+      "prefix_caching": false,
+      "max_batched_tokens": 16384,
+      "max_seqs": 32,
+      "attention_backend": "AttentionBackendEnum.FLASHMLA",
+      "moe_backend": "deep_gemm",
+      "graph_mode": "PIECEWISE",
+      "graph_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "dp": 1,
+      "pp": 1,
+      "pcp": 1,
+      "ep": true,
+      "use_all2all": false,
+      "q_replicate": false
+    },
+    "observability": {
+      "watchdog_enabled": true,
+      "watchdog_timeout_seconds": 30,
+      "watchdog_poll_seconds": 5
+    },
+    "kv_capacity_per_rank": {
+      "num_blocks": 3819,
+      "allocated_bytes": 17175601152,
+      "groups": [
+        {
+          "layers": 61,
+          "block_size": 64,
+          "spec": "MLAAttentionSpec"
+        }
+      ]
+    },
+    "memory_by_rank": [
+      {
+        "rank": 0,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9468051456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 1,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9434497024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 2,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9476440064,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 3,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9442885632,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 4,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9480634368,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 5,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9447079936,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 6,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9480634368,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 7,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9455468544,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 8,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9434497024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 9,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9468051456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 10,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9442885632,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 11,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9476440064,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 12,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9447079936,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 13,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9480634368,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 14,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9447079936,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 15,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9489022976,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      }
+    ]
+  },
+  {
+    "backend": "nccl",
+    "repetition": 2,
+    "controls": {
+      "dtype": "torch.bfloat16",
+      "quantization": "fp8",
+      "max_model_len": 131072,
+      "kv_dtype": "bfloat16",
+      "kv_budget": 17179869184,
+      "prefix_caching": false,
+      "max_batched_tokens": 16384,
+      "max_seqs": 32,
+      "attention_backend": "AttentionBackendEnum.FLASHMLA",
+      "moe_backend": "deep_gemm",
+      "graph_mode": "PIECEWISE",
+      "graph_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "dp": 1,
+      "pp": 1,
+      "pcp": 1,
+      "ep": true,
+      "use_all2all": false,
+      "q_replicate": false
+    },
+    "observability": {
+      "watchdog_enabled": true,
+      "watchdog_timeout_seconds": 30,
+      "watchdog_poll_seconds": 5
+    },
+    "kv_capacity_per_rank": {
+      "num_blocks": 3819,
+      "allocated_bytes": 17175601152,
+      "groups": [
+        {
+          "layers": 61,
+          "block_size": 64,
+          "spec": "MLAAttentionSpec"
+        }
+      ]
+    },
+    "memory_by_rank": [
+      {
+        "rank": 0,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15802171392,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 1,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15768616960,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 2,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15810560000,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 3,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15777005568,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 4,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15816851456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 5,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15783297024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 6,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15816851456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 7,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15791685632,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 8,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15768616960,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 9,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15802171392,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 10,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15777005568,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 11,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15810560000,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 12,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15783297024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 13,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15816851456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 14,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15783297024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      },
+      {
+        "rank": 15,
+        "gpu_memory": {
+          "allocated": 64534376960,
+          "reserved": 64760053760,
+          "free_total": [
+            15825240064,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [],
+        "registered_workspace_bytes": 0
+      }
+    ]
+  },
+  {
+    "backend": "nixl",
+    "repetition": 2,
+    "controls": {
+      "dtype": "torch.bfloat16",
+      "quantization": "fp8",
+      "max_model_len": 131072,
+      "kv_dtype": "bfloat16",
+      "kv_budget": 17179869184,
+      "prefix_caching": false,
+      "max_batched_tokens": 16384,
+      "max_seqs": 32,
+      "attention_backend": "AttentionBackendEnum.FLASHMLA",
+      "moe_backend": "deep_gemm",
+      "graph_mode": "PIECEWISE",
+      "graph_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "dp": 1,
+      "pp": 1,
+      "pcp": 1,
+      "ep": true,
+      "use_all2all": false,
+      "q_replicate": false
+    },
+    "observability": {
+      "watchdog_enabled": true,
+      "watchdog_timeout_seconds": 30,
+      "watchdog_poll_seconds": 5
+    },
+    "kv_capacity_per_rank": {
+      "num_blocks": 3819,
+      "allocated_bytes": 17175601152,
+      "groups": [
+        {
+          "layers": 61,
+          "block_size": 64,
+          "spec": "MLAAttentionSpec"
+        }
+      ]
+    },
+    "memory_by_rank": [
+      {
+        "rank": 0,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9468051456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 1,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9434497024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 2,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9476440064,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 3,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9442885632,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 4,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9480634368,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 5,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9447079936,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 6,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9480634368,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 7,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9455468544,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 8,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9434497024,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 9,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9468051456,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 10,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9442885632,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 11,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9476440064,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 12,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9447079936,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 13,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9480634368,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 14,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9447079936,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      },
+      {
+        "rank": 15,
+        "gpu_memory": {
+          "allocated": 69982778880,
+          "reserved": 70218940416,
+          "free_total": [
+            9489022976,
+            85017624576
+          ]
+        },
+        "workspace_geometry": [
+          {
+            "max_tokens": 16384,
+            "heads_per_rank": 8,
+            "head_dim": 512,
+            "ubatches": 1,
+            "tile_tokens": 7,
+            "tile_stride": 57568,
+            "peer_bytes": 134766720
+          }
+        ],
+        "registered_workspace_bytes": 6468804768
+      }
+    ]
+  }
+]

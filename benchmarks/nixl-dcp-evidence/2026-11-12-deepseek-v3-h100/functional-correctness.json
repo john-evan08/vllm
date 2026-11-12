@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "scope": "Function-level correctness and CUDA-graph stress; not full-model correctness or performance.",
+  "date": "2026-11-11",
+  "job_id": 76117,
+  "source_commit": "b1ba99ec247b2c85821b025603740f4062b5082b",
+  "source_archive_sha256": "8aeb551963c167b07ad71dc593aca95b838d80278232b640c540b603b5d337a9",
+  "image_sha256": "78ea5955b789d4c8b312f5df31d695b069d7620acdb6a7e7e93b6da93476de85",
+  "harness_sha256": "5703abbf13a1ca9e7f62c89e27c649099e7258cd723410b224cb88d8fc7231f8",
+  "nodes": 2,
+  "gpus_per_node": 8,
+  "dcp_size": 16,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "driver": "580.95.05",
+  "torch": "2.14.0+cu130",
+  "per_rank_paths": {
+    "self": 1,
+    "mapped_p2p": 7,
+    "nixl_put": 8
+  },
+  "remote_device_transport": "rc_mlx5_gda",
+  "probe_kernels_per_rank": {
+    "nixl_epoch": 1,
+    "nixl_fused_send": 1,
+    "nixl_combine": 1
+  },
+  "delayed_consumer_passed_on_all_ranks": true,
+  "cases_passed_on_all_ranks": [
+    {
+      "TEST_DCP_TRANSPORT": "nixl",
+      "TEST_DTYPE": "bfloat16",
+      "TEST_LSE_DTYPE": "float32",
+      "TEST_LSE_LAYOUT": "transposed",
+      "LSE_BASE_E": "1",
+      "TEST_NIXL_CHANNELS": "1",
+      "TEST_NIXL_TILE_BYTES": "32768",
+      "TEST_NIXL_REPLAYS": "1024",
+      "TEST_REQUIRE_RDMA": "1",
+      "TEST_REQUIRE_MIXED": "1"
+    },
+    {
+      "TEST_DCP_TRANSPORT": "nixl",
+      "TEST_DTYPE": "float16",
+      "TEST_LSE_DTYPE": "float32",
+      "TEST_LSE_LAYOUT": "packed",
+      "LSE_BASE_E": "0",
+      "TEST_NIXL_CHANNELS": "1",
+      "TEST_NIXL_TILE_BYTES": "32768",
+      "TEST_NIXL_REPLAYS": "1024",
+      "TEST_REQUIRE_RDMA": "1",
+      "TEST_REQUIRE_MIXED": "1"
+    },
+    {
+      "TEST_DCP_TRANSPORT": "nixl",
+      "TEST_DTYPE": "bfloat16",
+      "TEST_LSE_DTYPE": "float32",
+      "TEST_LSE_LAYOUT": "transposed",
+      "LSE_BASE_E": "1",
+      "TEST_NIXL_CHANNELS": "4",
+      "TEST_NIXL_TILE_BYTES": "32768",
+      "TEST_NIXL_REPLAYS": "1024",
+      "TEST_REQUIRE_RDMA": "1",
+      "TEST_REQUIRE_MIXED": "1"
+    },
+    {
+      "TEST_DCP_TRANSPORT": "nixl",
+      "TEST_DTYPE": "float16",
+      "TEST_LSE_DTYPE": "float32",
+      "TEST_LSE_LAYOUT": "packed",
+      "LSE_BASE_E": "0",
+      "TEST_NIXL_CHANNELS": "4",
+      "TEST_NIXL_TILE_BYTES": "32768",
+      "TEST_NIXL_REPLAYS": "1024",
+      "TEST_REQUIRE_RDMA": "1",
+      "TEST_REQUIRE_MIXED": "1"
+    }
+  ],
+  "full_capacity_geometry_passed_on_all_ranks": {
+    "passed": true,
+    "capacity": 16384,
+    "heads_per_rank": 8,
+    "head_dim": 512,
+    "workspace_bytes": 6468804768,
+    "cases": [
+      {
+        "tokens": 1,
+        "output_stride": [
+          66048,
+          512,
+          1
+        ],
+        "lse_stride": [
+          1,
+          1
+        ],
+        "exact_match": true
+      },
+      {
+        "tokens": 4,
+        "output_stride": [
+          66048,
+          512,
+          1
+        ],
+        "lse_stride": [
+          1,
+          4
+        ],
+        "exact_match": true
+      },
+      {
+        "tokens": 16,
+        "output_stride": [
+          66048,
+          512,
+          1
+        ],
+        "lse_stride": [
+          1,
+          16
+        ],
+        "exact_match": true
+      },
+      {
+        "tokens": 32,
+        "output_stride": [
+          66048,
+          512,
+          1
+        ],
+        "lse_stride": [
+          1,
+          32
+        ],
+        "exact_match": true
+      },
+      {
+        "tokens": 128,
+        "output_stride": [
+          66048,
+          512,
+          1
+        ],
+        "lse_stride": [
+          1,
+          128
+        ],
+        "exact_match": true
+      },
+      {
+        "tokens": 16384,
+        "output_stride": [
+          66048,
+          512,
+          1
+        ],
+        "lse_stride": [
+          1,
+          16384
+        ],
+        "exact_match": true
+      }
+    ]
+  },
+  "health": [
+    {
+      "node": 0,
+      "passed": true,
+      "maximum_temperature_c": 62,
+      "thermal_or_hardware_slowdown_samples": 0
+    },
+    {
+      "node": 1,
+      "passed": true,
+      "maximum_temperature_c": 63,
+      "thermal_or_hardware_slowdown_samples": 0
+    }
+  ]
+}
