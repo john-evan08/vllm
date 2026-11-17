@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "input_sha256": "28e1ef4fc74d227217a6e18554266645b44789641be834a3eb27579c1f3f8d29",
+  "measured_cells": 48,
+  "paired_points": 12,
+  "matched_published_ratios": true,
+  "matplotlib": "3.11.2"
+}
