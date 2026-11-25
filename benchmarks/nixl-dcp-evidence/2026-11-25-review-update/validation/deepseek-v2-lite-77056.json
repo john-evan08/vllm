@@ -1,0 +1,924 @@
+{
+  "passed": true,
+  "results": {
+    "local2-eager/nccl/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-eager/nccl/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795082748824298058.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-eager/nccl/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795082748864859588.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      }
+    ],
+    "local2-eager/nccl/batch1/repeat_exact": true,
+    "local2-eager/nccl/batch7/repeat_exact": true,
+    "local2-eager/nccl/batch8/repeat_exact": true,
+    "local2-eager/nixl/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-eager/nixl/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795082854018372925.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-eager/nixl/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795082854002905597.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      }
+    ],
+    "local2-eager/nixl/batch1/repeat_exact": true,
+    "local2-eager/nixl/repeat0/batch1": {
+      "prompts": 1,
+      "exact_generations": 1,
+      "comparable_steps": 32,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-eager/nixl/repeat1/batch1": {
+      "prompts": 1,
+      "exact_generations": 1,
+      "comparable_steps": 32,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-eager/nixl/batch7/repeat_exact": true,
+    "local2-eager/nixl/repeat0/batch7": {
+      "prompts": 7,
+      "exact_generations": 7,
+      "comparable_steps": 224,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-eager/nixl/repeat1/batch7": {
+      "prompts": 7,
+      "exact_generations": 7,
+      "comparable_steps": 224,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-eager/nixl/batch8/repeat_exact": true,
+    "local2-eager/nixl/repeat0/batch8": {
+      "prompts": 8,
+      "exact_generations": 8,
+      "comparable_steps": 256,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-eager/nixl/repeat1/batch8": {
+      "prompts": 8,
+      "exact_generations": 8,
+      "comparable_steps": 256,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/nccl/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-graph/nccl/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795082963993622148.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-graph/nccl/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795082963997845611.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      }
+    ],
+    "local2-graph/nccl/batch1/repeat_exact": true,
+    "local2-graph/nccl/batch7/repeat_exact": true,
+    "local2-graph/nccl/batch8/repeat_exact": true,
+    "local2-graph/direct/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-graph/direct/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795083059096100780.pt.trace.json.gz",
+        "direct_dispatch": 837,
+        "direct_combine": 837,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 297,
+        "dcp_unpack": 297
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-graph/direct/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795083059157435119.pt.trace.json.gz",
+        "direct_dispatch": 837,
+        "direct_combine": 837,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 297,
+        "dcp_unpack": 297
+      }
+    ],
+    "local2-graph/direct/batch1/repeat_exact": true,
+    "local2-graph/direct/repeat0/batch1": {
+      "prompts": 1,
+      "exact_generations": 0,
+      "comparable_steps": 21,
+      "max_logprob_delta": 0.07949912548065186,
+      "prompt_mean_logprob_deltas": [
+        0.021144575040255274
+      ],
+      "first_divergences": [
+        {
+          "prompt": 0,
+          "step": 20
+        }
+      ],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/direct/repeat1/batch1": {
+      "prompts": 1,
+      "exact_generations": 0,
+      "comparable_steps": 21,
+      "max_logprob_delta": 0.07949912548065186,
+      "prompt_mean_logprob_deltas": [
+        0.021144575040255274
+      ],
+      "first_divergences": [
+        {
+          "prompt": 0,
+          "step": 20
+        }
+      ],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/direct/batch7/repeat_exact": true,
+    "local2-graph/direct/repeat0/batch7": {
+      "prompts": 7,
+      "exact_generations": 6,
+      "comparable_steps": 213,
+      "max_logprob_delta": 0.09922802448272705,
+      "prompt_mean_logprob_deltas": [
+        0.008831023992527099,
+        0.007753108349788818,
+        0.00912083288130816,
+        0.010450855130329728,
+        0.0010812501641339622,
+        0.0008337883136846358,
+        0.0173577556561213
+      ],
+      "first_divergences": [
+        {
+          "prompt": 0,
+          "step": 20
+        }
+      ],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/direct/repeat1/batch7": {
+      "prompts": 7,
+      "exact_generations": 6,
+      "comparable_steps": 213,
+      "max_logprob_delta": 0.09922802448272705,
+      "prompt_mean_logprob_deltas": [
+        0.008831023992527099,
+        0.007753108349788818,
+        0.00912083288130816,
+        0.010450855130329728,
+        0.0010812501641339622,
+        0.0008337883136846358,
+        0.0173577556561213
+      ],
+      "first_divergences": [
+        {
+          "prompt": 0,
+          "step": 20
+        }
+      ],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/direct/batch8/repeat_exact": true,
+    "local2-graph/direct/repeat0/batch8": {
+      "prompts": 8,
+      "exact_generations": 7,
+      "comparable_steps": 245,
+      "max_logprob_delta": 0.15625739097595215,
+      "prompt_mean_logprob_deltas": [
+        0.008831023992527099,
+        0.007753108349788818,
+        0.00912083288130816,
+        0.010450855130329728,
+        0.0010812501641339622,
+        0.0008337883136846358,
+        0.0173577556561213,
+        0.01614231866415139
+      ],
+      "first_divergences": [
+        {
+          "prompt": 0,
+          "step": 20
+        }
+      ],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/direct/repeat1/batch8": {
+      "prompts": 8,
+      "exact_generations": 7,
+      "comparable_steps": 245,
+      "max_logprob_delta": 0.15625739097595215,
+      "prompt_mean_logprob_deltas": [
+        0.008831023992527099,
+        0.007753108349788818,
+        0.00912083288130816,
+        0.010450855130329728,
+        0.0010812501641339622,
+        0.0008337883136846358,
+        0.0173577556561213,
+        0.01614231866415139
+      ],
+      "first_divergences": [
+        {
+          "prompt": 0,
+          "step": 20
+        }
+      ],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/nixl/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-graph/nixl/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795083156055760275.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/local2-graph/nixl/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795083156079561391.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      }
+    ],
+    "local2-graph/nixl/batch1/repeat_exact": true,
+    "local2-graph/nixl/repeat0/batch1": {
+      "prompts": 1,
+      "exact_generations": 1,
+      "comparable_steps": 32,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/nixl/repeat1/batch1": {
+      "prompts": 1,
+      "exact_generations": 1,
+      "comparable_steps": 32,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/nixl/batch7/repeat_exact": true,
+    "local2-graph/nixl/repeat0/batch7": {
+      "prompts": 7,
+      "exact_generations": 7,
+      "comparable_steps": 224,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/nixl/repeat1/batch7": {
+      "prompts": 7,
+      "exact_generations": 7,
+      "comparable_steps": 224,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/nixl/batch8/repeat_exact": true,
+    "local2-graph/nixl/repeat0/batch8": {
+      "prompts": 8,
+      "exact_generations": 8,
+      "comparable_steps": 256,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "local2-graph/nixl/repeat1/batch8": {
+      "prompts": 8,
+      "exact_generations": 8,
+      "comparable_steps": 256,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "rdma2-graph/nccl/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/rdma2-graph/nccl/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795083318032273717.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/rdma2-graph/nccl/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795083318055867098.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      }
+    ],
+    "rdma2-graph/nccl/batch1/repeat_exact": true,
+    "rdma2-graph/nccl/batch7/repeat_exact": true,
+    "rdma2-graph/nccl/batch8/repeat_exact": true,
+    "rdma2-graph/nixl/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/rdma2-graph/nixl/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795083428276584553.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/rdma2-graph/nixl/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795083428292233940.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      }
+    ],
+    "rdma2-graph/nixl/batch1/repeat_exact": true,
+    "rdma2-graph/nixl/repeat0/batch1": {
+      "prompts": 1,
+      "exact_generations": 1,
+      "comparable_steps": 32,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "rdma2-graph/nixl/repeat1/batch1": {
+      "prompts": 1,
+      "exact_generations": 1,
+      "comparable_steps": 32,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "rdma2-graph/nixl/batch7/repeat_exact": true,
+    "rdma2-graph/nixl/repeat0/batch7": {
+      "prompts": 7,
+      "exact_generations": 7,
+      "comparable_steps": 224,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "rdma2-graph/nixl/repeat1/batch7": {
+      "prompts": 7,
+      "exact_generations": 7,
+      "comparable_steps": 224,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "rdma2-graph/nixl/batch8/repeat_exact": true,
+    "rdma2-graph/nixl/repeat0/batch8": {
+      "prompts": 8,
+      "exact_generations": 8,
+      "comparable_steps": 256,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "rdma2-graph/nixl/repeat1/batch8": {
+      "prompts": 8,
+      "exact_generations": 8,
+      "comparable_steps": 256,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "mixed4-graph/nccl/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/mixed4-graph/nccl/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795083534173650970.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/mixed4-graph/nccl/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795083534175149227.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/mixed4-graph/nccl/traces/dp0_pp0_tp2_dcp2_ep2_rank2.1795083534176521810.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/mixed4-graph/nccl/traces/dp0_pp0_tp3_dcp3_ep3_rank3.1795083534166750899.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 0,
+        "nixl_fused_send": 0,
+        "nixl_combine": 0,
+        "dcp_pack": 1134,
+        "dcp_unpack": 1134
+      }
+    ],
+    "mixed4-graph/nccl/batch1/repeat_exact": true,
+    "mixed4-graph/nccl/batch7/repeat_exact": true,
+    "mixed4-graph/nccl/batch8/repeat_exact": true,
+    "mixed4-graph/nixl/traces": [
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/mixed4-graph/nixl/traces/dp0_pp0_tp0_dcp0_ep0_rank0.1795083645948521165.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/mixed4-graph/nixl/traces/dp0_pp0_tp1_dcp1_ep1_rank1.1795083645971947475.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/mixed4-graph/nixl/traces/dp0_pp0_tp2_dcp2_ep2_rank2.1795083645954766059.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      },
+      {
+        "trace": "/mnt/lustre/jkarcenty/dcp_nixl/run_artifacts/nixl-review-gpu-77056/model/mixed4-graph/nixl/traces/dp0_pp0_tp3_dcp3_ep3_rank3.1795083645986262062.pt.trace.json.gz",
+        "direct_dispatch": 0,
+        "direct_combine": 0,
+        "nixl_put": 0,
+        "nixl_signal": 0,
+        "nixl_epoch": 1134,
+        "nixl_fused_send": 1134,
+        "nixl_combine": 1134,
+        "dcp_pack": 0,
+        "dcp_unpack": 0
+      }
+    ],
+    "mixed4-graph/nixl/batch1/repeat_exact": true,
+    "mixed4-graph/nixl/repeat0/batch1": {
+      "prompts": 1,
+      "exact_generations": 1,
+      "comparable_steps": 32,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "mixed4-graph/nixl/repeat1/batch1": {
+      "prompts": 1,
+      "exact_generations": 1,
+      "comparable_steps": 32,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "mixed4-graph/nixl/batch7/repeat_exact": true,
+    "mixed4-graph/nixl/repeat0/batch7": {
+      "prompts": 7,
+      "exact_generations": 7,
+      "comparable_steps": 224,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "mixed4-graph/nixl/repeat1/batch7": {
+      "prompts": 7,
+      "exact_generations": 7,
+      "comparable_steps": 224,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "mixed4-graph/nixl/batch8/repeat_exact": true,
+    "mixed4-graph/nixl/repeat0/batch8": {
+      "prompts": 8,
+      "exact_generations": 8,
+      "comparable_steps": 256,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "mixed4-graph/nixl/repeat1/batch8": {
+      "prompts": 8,
+      "exact_generations": 8,
+      "comparable_steps": 256,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    }
+  }
+}

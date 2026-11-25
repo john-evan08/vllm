@@ -1,0 +1,6 @@
+job=77128
+nodes=dgx-gaia-44
+base_commit=f0311094893c3bdee51d3bb74b3d23459a78c0db
+image=/mnt/lustre/jkarcenty/dcp_nixl/images/review-20261119-qualify-77036/runtime.sqsh
+image_sha256=3877af650ab46630c7dcfbe2ba7b2e7d619501012f2d25768ffa05a2b7f02b7e
+overlay_sha256=3ffe54b4d44762ba1e5f339f2afbfade0d76f0feb12c31814cd0d42ab85d675a

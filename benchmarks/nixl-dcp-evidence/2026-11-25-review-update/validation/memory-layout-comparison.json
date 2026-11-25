@@ -1,0 +1,24 @@
+{
+  "description": "Calculated registered storage, same N16 H8 capacity16384, L512 V128, one ubatch, four channels, 64KiB target tiles; excludes all other model/runtime allocations",
+  "old_full_latent": {
+    "send": 2156267520,
+    "receive": 4312537088,
+    "metadata": 160
+  },
+  "new_small_latent": {
+    "send": 921600,
+    "receive": 1845248,
+    "metadata": 160
+  },
+  "new_full_projected": {
+    "send": 16506880,
+    "receive": 1091520512,
+    "metadata": 160
+  },
+  "old_total_bytes": 6468804768,
+  "new_total_bytes": 1110794560,
+  "reduction_percent": 82.82844204087132,
+  "old_GiB": 6.024543911218643,
+  "new_GiB": 1.0345080494880676,
+  "projected_allocation_verified_against_gpu_job": 77047
+}

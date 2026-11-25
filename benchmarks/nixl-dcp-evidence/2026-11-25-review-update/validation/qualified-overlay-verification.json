@@ -1,0 +1,92 @@
+[
+  {
+    "file": ".buildkite/test-amd.yaml",
+    "expected": "2c3e6dc69e7588c083ac6a218d81d22f54ee97995362c7947dc4722315571839",
+    "actual": "2c3e6dc69e7588c083ac6a218d81d22f54ee97995362c7947dc4722315571839",
+    "matches": true
+  },
+  {
+    "file": ".buildkite/test_areas/distributed.yaml",
+    "expected": "10797b35b86136afa30c8928071b84c1c627eecea2ca9c3986b35007b6cde457",
+    "actual": "10797b35b86136afa30c8928071b84c1c627eecea2ca9c3986b35007b6cde457",
+    "matches": true
+  },
+  {
+    "file": "CMakeLists.txt",
+    "expected": "0bba0d4800d5ecb0a3418dd529dc21f39f8687b00f228ed9385bd9e57a6f6e48",
+    "actual": "0bba0d4800d5ecb0a3418dd529dc21f39f8687b00f228ed9385bd9e57a6f6e48",
+    "matches": true
+  },
+  {
+    "file": "csrc/attention/dcp_utils/dcp_nixl_a2a.cu",
+    "expected": "9d92c53a2a21b0f35cd163316b77427a26b3465de2a40277d5680d4640a0a69b",
+    "actual": "9d92c53a2a21b0f35cd163316b77427a26b3465de2a40277d5680d4640a0a69b",
+    "matches": true
+  },
+  {
+    "file": "docs/design/nixl_dcp.md",
+    "expected": "8652d2a89d56e96ee1aa0ab9a7a68e964f75e69ebbf422eed1fcd1766df4e720",
+    "actual": "8652d2a89d56e96ee1aa0ab9a7a68e964f75e69ebbf422eed1fcd1766df4e720",
+    "matches": true
+  },
+  {
+    "file": "docs/getting_started/installation/gpu.cuda.inc.md",
+    "expected": "115aa857528c2241b5899695a87af50a0489442651c62bfa303e33d0cff1b0d7",
+    "actual": "115aa857528c2241b5899695a87af50a0489442651c62bfa303e33d0cff1b0d7",
+    "matches": true
+  },
+  {
+    "file": "docs/serving/context_parallel_deployment.md",
+    "expected": "7ecbe4c8ab5747375465c0752524717ac8acaefc33ce3a30d5b2321d70126b51",
+    "actual": "7ecbe4c8ab5747375465c0752524717ac8acaefc33ce3a30d5b2321d70126b51",
+    "matches": true
+  },
+  {
+    "file": "tests/distributed/test_dcp_a2a.py",
+    "expected": "171daabd1ff8fec4b0258240822334b10a214f380f95af71f863dffb47e1ac62",
+    "actual": "171daabd1ff8fec4b0258240822334b10a214f380f95af71f863dffb47e1ac62",
+    "matches": true
+  },
+  {
+    "file": "tests/distributed/test_dcp_direct_a2a_lse_reduce.py",
+    "expected": "d1e5da14fe757596340546e630832c08ec1dbc7ee018847bb3cf027a242e73a7",
+    "actual": "d1e5da14fe757596340546e630832c08ec1dbc7ee018847bb3cf027a242e73a7",
+    "matches": true
+  },
+  {
+    "file": "vllm/envs.py",
+    "expected": "b9b26b1569c0b046f54d034dde8e2a595e7b409fd0ff517bfb15c3f01808a9c7",
+    "actual": "b9b26b1569c0b046f54d034dde8e2a595e7b409fd0ff517bfb15c3f01808a9c7",
+    "matches": true
+  },
+  {
+    "file": "vllm/model_executor/layers/attention/mla_attention.py",
+    "expected": "8bf9a7df5d0d0ffdc2f7d8dc95bf81ca4b7004d4b276efbd03bd357af211e9eb",
+    "actual": "8bf9a7df5d0d0ffdc2f7d8dc95bf81ca4b7004d4b276efbd03bd357af211e9eb",
+    "matches": true
+  },
+  {
+    "file": "vllm/models/kimi_k3/nvidia/mla.py",
+    "expected": "9b9bcd7bbebf6684259e94f332fdc28550bc9f8a0da9e8b7c3fb0834fc50b963",
+    "actual": "9b9bcd7bbebf6684259e94f332fdc28550bc9f8a0da9e8b7c3fb0834fc50b963",
+    "matches": true
+  },
+  {
+    "file": "vllm/v1/attention/ops/dcp.py",
+    "expected": "cc62084f552432e239ad1f36b3f1a17ef166a6c4055fc995ee0878c85ebc2e9f",
+    "actual": "cc62084f552432e239ad1f36b3f1a17ef166a6c4055fc995ee0878c85ebc2e9f",
+    "matches": true
+  },
+  {
+    "file": "vllm/v1/attention/ops/nixl_dcp.py",
+    "expected": "a5aa20f7d80dea84f98b5912b6be4a87831a1aa874b527fd71c219394cc9c6c1",
+    "actual": "a5aa20f7d80dea84f98b5912b6be4a87831a1aa874b527fd71c219394cc9c6c1",
+    "matches": true
+  },
+  {
+    "file": "cmake/external_projects/nixl_dcp.cmake",
+    "expected": "8bd789c58b6500b2969e7b011ea956449f29d5cc56a3fe2b17b21e41857db40c",
+    "actual": "8bd789c58b6500b2969e7b011ea956449f29d5cc56a3fe2b17b21e41857db40c",
+    "matches": true
+  }
+]

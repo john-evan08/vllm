@@ -1,0 +1,432 @@
+{
+  "implementation_commit": "809dd16e952aa155b658d895e5f58929addc5f3b",
+  "published": false,
+  "projection_model_results_pending": true,
+  "microbenchmark_reanalysis": [
+    {
+      "job": 77121,
+      "ranks": 16,
+      "configurations": 48,
+      "timed_arm_samples": 864,
+      "reproduced_saved_summary": true
+    },
+    {
+      "job": 77128,
+      "ranks": 8,
+      "configurations": 48,
+      "timed_arm_samples": 1536,
+      "reproduced_saved_summary": true
+    }
+  ],
+  "historical_mooncake_cells": 8,
+  "files": [
+    {
+      "source": "dcp_experiments/figures/nixl-projection-77121/summary.json",
+      "path": "microbenchmarks/mixed16/summary.json",
+      "size": 67444,
+      "sha256": "ae0a18eb0b2caa072bbd39bc2ac2c039c90b8d9821c6b41bd94cd1176de5c91e"
+    },
+    {
+      "source": "dcp_experiments/figures/nixl-projection-77121/projection-comparison.png",
+      "path": "microbenchmarks/mixed16/projection-comparison.png",
+      "size": 333178,
+      "sha256": "6669713117ecab1678659d1596c39a7396b98a0798503816604ea4b32b4ddd4e"
+    },
+    {
+      "source": "dcp_experiments/figures/nixl-projection-77121/projection-comparison.svg",
+      "path": "microbenchmarks/mixed16/projection-comparison.svg",
+      "size": 145697,
+      "sha256": "f32bfbfb819119ccf1245406a1e3e5caa007816bc0f31878bb46f5cc2c402b17"
+    },
+    {
+      "source": "dcp_experiments/figures/nixl-projection-77121/README.md",
+      "path": "microbenchmarks/mixed16/README.md",
+      "size": 2176,
+      "sha256": "e9c28490b05aafcbbcd0d547aa2fd6d5c7406ac04b9ed0fe8160a894ebd97e75"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank0.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank0.jsonl",
+      "size": 539810,
+      "sha256": "c5653a529dc18df86fad43e2e72bfd565a9c5bb6fbe569c4ff38267e7509b162"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank1.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank1.jsonl",
+      "size": 539810,
+      "sha256": "a1d98cf8f8173e35d4a90604b89edbb7643e961f5527d26de0168057034fbebf"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank2.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank2.jsonl",
+      "size": 539810,
+      "sha256": "8ca49f1b136a27150a280d1dd312a46a01b189b6be0820399bce2796d530f1af"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank3.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank3.jsonl",
+      "size": 539810,
+      "sha256": "f9512ef4b79eee31b251734a9e0117e6ab9631629335db7050893c2642043a35"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank4.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank4.jsonl",
+      "size": 539810,
+      "sha256": "f785857ca5f9f1d9062f2c54d64b5bb94e7181e8b2134e07101353720220dd48"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank5.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank5.jsonl",
+      "size": 539810,
+      "sha256": "b5e0c822a7ec27f6883b458fd566d6f1b9584bb6d67765c036670857335d121b"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank6.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank6.jsonl",
+      "size": 539810,
+      "sha256": "c41c10ace7e6e38ddf364421004c7ed6d929e9ea22229d46704c61b55f79c755"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank7.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank7.jsonl",
+      "size": 539810,
+      "sha256": "1e3d39a2dbbea47e812d2afdfb79d97a35350b54039e4557a1508d8760f0c566"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank8.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank8.jsonl",
+      "size": 539810,
+      "sha256": "206c4065dca399e3603b0587927f870b282c7ba9724665d09b20cb362454d6d0"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank9.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank9.jsonl",
+      "size": 539810,
+      "sha256": "7e82660e83b462272d52359036a6c13f04eebb63fd134667b55139aa538ca5b5"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank10.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank10.jsonl",
+      "size": 539811,
+      "sha256": "c8708a481b202c513be297cbf0158f81562515072c8fb8901827721ff1bb0ca0"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank11.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank11.jsonl",
+      "size": 539811,
+      "sha256": "94669f8a7afef5afab3497bc7c3f7b01de1efbe23f86082ad3d63cde516d4ba4"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank12.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank12.jsonl",
+      "size": 539811,
+      "sha256": "87f5fd1c917426c507475118eb4f2e6c1c60905412e0b9a6a93c6e4df4e4c544"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank13.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank13.jsonl",
+      "size": 539811,
+      "sha256": "74df9536aa63c44a220c9f48fb5e488a2b929191f0c2460d0c62820a37b121b5"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank14.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank14.jsonl",
+      "size": 539811,
+      "sha256": "e834c0d7acbc351afe78d048530c43cb28b701af7536a7ab81c693631adedba5"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/benchmark/rank15.jsonl",
+      "path": "microbenchmarks/mixed16/raw/rank15.jsonl",
+      "size": 539811,
+      "sha256": "d56991656b213a48e56032d774ccded78b632220e705983c1d18d88659059a62"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/provenance.txt",
+      "path": "microbenchmarks/mixed16/run/provenance.txt",
+      "size": 331,
+      "sha256": "e5fd3ba94f0165dddc88d2eea2549ca28677bbfa3125dffd2afce9ad7b074843"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/job-complete",
+      "path": "microbenchmarks/mixed16/run/job-complete",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/health-node0/summary.json",
+      "path": "microbenchmarks/mixed16/run/health-node0/summary.json",
+      "size": 14700,
+      "sha256": "77d3ea40ab6d658c0fe669f8ca6e248eb4ef6a2436b7828efdab3414c6030878"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/sustained-health-node0.json",
+      "path": "microbenchmarks/mixed16/run/sustained-health-node0.json",
+      "size": 691,
+      "sha256": "342233fd2230f74e3a2b93586e35a7e97eed6a0641bb9dba1ccc6a1a0bcbb2eb"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/health-node1/summary.json",
+      "path": "microbenchmarks/mixed16/run/health-node1/summary.json",
+      "size": 14770,
+      "sha256": "92b3f035ed8e4538a39dc243a5d9b02d596e6fd671caca795a3c67b8d2c57bd6"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77121/sustained-health-node1.json",
+      "path": "microbenchmarks/mixed16/run/sustained-health-node1.json",
+      "size": 691,
+      "sha256": "1a77527e317767a00b653f9f07328a401909682c7133c1160e1a8d625991d40b"
+    },
+    {
+      "source": "dcp_experiments/figures/nixl-projection-local-77128/summary.json",
+      "path": "microbenchmarks/local8/summary.json",
+      "size": 100602,
+      "sha256": "6ded708ede033df7750ab54f793b29e26ed69c891ecb8650898a78eb33fea780"
+    },
+    {
+      "source": "dcp_experiments/figures/nixl-projection-local-77128/projection-comparison.png",
+      "path": "microbenchmarks/local8/projection-comparison.png",
+      "size": 359179,
+      "sha256": "2869a220498c89e1a086709bc039f24f37302bd61a1ddaf740f77bae9a7199db"
+    },
+    {
+      "source": "dcp_experiments/figures/nixl-projection-local-77128/projection-comparison.svg",
+      "path": "microbenchmarks/local8/projection-comparison.svg",
+      "size": 159079,
+      "sha256": "d7b3c759ee7142cc2ed84abc7b5e47bfefd8abd795e65d13da14a8105ab450d4"
+    },
+    {
+      "source": "dcp_experiments/figures/nixl-projection-local-77128/README.md",
+      "path": "microbenchmarks/local8/README.md",
+      "size": 2665,
+      "sha256": "682f7db738ea4e4f8687276c5199deaf91ab58a886029f7386e7d08e9be20901"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/benchmark/rank0.jsonl",
+      "path": "microbenchmarks/local8/raw/rank0.jsonl",
+      "size": 787416,
+      "sha256": "b0dad197233c7f6c063354b7254d04ef535824ac9985997ab967ff8ceef1ceb7"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/benchmark/rank1.jsonl",
+      "path": "microbenchmarks/local8/raw/rank1.jsonl",
+      "size": 787446,
+      "sha256": "43ab96e54b29102dadad21a040c8ef7dedc344407dedb6354936d7085104c759"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/benchmark/rank2.jsonl",
+      "path": "microbenchmarks/local8/raw/rank2.jsonl",
+      "size": 787387,
+      "sha256": "580e1ecf20431d69342fe99016da1156832bb373a08fac7fc88d1daf4662c90c"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/benchmark/rank3.jsonl",
+      "path": "microbenchmarks/local8/raw/rank3.jsonl",
+      "size": 787432,
+      "sha256": "f4a1df0afb410ca59396fcd1092780940dc625a01569d2efc3568c36259da1d1"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/benchmark/rank4.jsonl",
+      "path": "microbenchmarks/local8/raw/rank4.jsonl",
+      "size": 787467,
+      "sha256": "dac2434871e2953f23379c042aed9384af28a9e8a5cc59760a5f212f84313fb2"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/benchmark/rank5.jsonl",
+      "path": "microbenchmarks/local8/raw/rank5.jsonl",
+      "size": 787466,
+      "sha256": "4d6b80f6055fd1ed2a90ed9e580d1db1b1a9098029265643deaaee09da783281"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/benchmark/rank6.jsonl",
+      "path": "microbenchmarks/local8/raw/rank6.jsonl",
+      "size": 787475,
+      "sha256": "5be94c511e5cb1e86ca19dd7bd5e315ee2aef4233306a6acfb1c7312a483e7aa"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/benchmark/rank7.jsonl",
+      "path": "microbenchmarks/local8/raw/rank7.jsonl",
+      "size": 787450,
+      "sha256": "cfed352475db020091f09cceec67171deba722aca0ee86dc3211bd450b6891b9"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/provenance.txt",
+      "path": "microbenchmarks/local8/run/provenance.txt",
+      "size": 326,
+      "sha256": "3d15356cd4df4d3863172a63e115147a7a1c8e4c16abc3daae973bb8a3d14a5e"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/job-complete",
+      "path": "microbenchmarks/local8/run/job-complete",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/health-node0/summary.json",
+      "path": "microbenchmarks/local8/run/health-node0/summary.json",
+      "size": 14770,
+      "sha256": "bf16f57adacf50c449ffe2aa853d2490da2294ff5238ebc50f1b60b5fd4b0581"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/gpu-77128/sustained-health-node0.json",
+      "path": "microbenchmarks/local8/run/sustained-health-node0.json",
+      "size": 691,
+      "sha256": "aaff79492cb8d3c9a263acf37468d45a452bf35825607f785d6a40576644a382"
+    },
+    {
+      "source": "dcp_experiments/scripts/analyze_nixl_projection.py",
+      "path": "reproduction/analyze_nixl_projection.py",
+      "size": 10572,
+      "sha256": "ba328609c00e72cc4deb63efe6b3ee61b676622725dbfa518a23f600a96596dc"
+    },
+    {
+      "source": "dcp_experiments/scripts/benchmark_nixl_projection.py",
+      "path": "reproduction/benchmark_nixl_projection.py",
+      "size": 14264,
+      "sha256": "602f178a03a7ab544e79f0e4d5adad2d00b9662c2e925ee9f069902d523f39ca"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/harness-3/overlay-files.sha256",
+      "path": "reproduction/mixed16/overlay-files.sha256",
+      "size": 1517,
+      "sha256": "2f26b306f8463d8bd830de67a6f8b8a36968b424cd4865eefdeb418786680f2b"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/harness-3/harness.sha256",
+      "path": "reproduction/mixed16/harness.sha256",
+      "size": 880,
+      "sha256": "41dc648a345b8cca3d4948586efe83fa39fa555214c8c147628aa4652c227ce2"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/harness-3/nixl_projection_inner.sh",
+      "path": "reproduction/mixed16/nixl_projection_inner.sh",
+      "size": 4822,
+      "sha256": "681db80b0f0a3a7596e51260e427109e015e33b6cf76b1e24ec6e3a661e6abae"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/harness-3/sbatch_nixl_projection.sh",
+      "path": "reproduction/mixed16/sbatch_nixl_projection.sh",
+      "size": 2429,
+      "sha256": "6e59080830d3fb98aa38121f47feefc3d8b2dfb847067941be10aad71aab55a9"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/harness-local-2/overlay-files.sha256",
+      "path": "reproduction/local8/overlay-files.sha256",
+      "size": 1517,
+      "sha256": "2f26b306f8463d8bd830de67a6f8b8a36968b424cd4865eefdeb418786680f2b"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/harness-local-2/harness.sha256",
+      "path": "reproduction/local8/harness.sha256",
+      "size": 880,
+      "sha256": "5183c7c5d768be9f6c4af572190b6f11f4049fa0341681eae24611505e9145f0"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/harness-local-2/nixl_projection_inner.sh",
+      "path": "reproduction/local8/nixl_projection_inner.sh",
+      "size": 6310,
+      "sha256": "70899e9f8621fb2ef7fef1b91714d4cdc786129808815985a2c9665174b3115b"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-comparison-20261119/harness-local-2/sbatch_nixl_projection.sh",
+      "path": "reproduction/local8/sbatch_nixl_projection.sh",
+      "size": 2429,
+      "sha256": "6e59080830d3fb98aa38121f47feefc3d8b2dfb847067941be10aad71aab55a9"
+    },
+    {
+      "source": "build/artifacts/nixl-mooncake-review-20261118/results.csv",
+      "path": "historical-mooncake-76482/results.csv",
+      "size": 2155,
+      "sha256": "c38d6185c4034f627e0b511a50500dce05b2508a80248a4828505ce6b9850a4c"
+    },
+    {
+      "source": "build/artifacts/nixl-mooncake-review-20261118/results.json",
+      "path": "historical-mooncake-76482/results.json",
+      "size": 8277965,
+      "sha256": "da544316d51aa658841f05077d8051df091338665138cd8da379a921733c0f64"
+    },
+    {
+      "source": "build/artifacts/nixl-mooncake-review-20261118/comparison.png",
+      "path": "historical-mooncake-76482/comparison.png",
+      "size": 131552,
+      "sha256": "06259a995354aefc43612fb3b23712a267158936b56fda09dfb465e5994c3954"
+    },
+    {
+      "source": "build/artifacts/nixl-mooncake-review-20261118/README.md",
+      "path": "historical-mooncake-76482/README.md",
+      "size": 1000,
+      "sha256": "13e16e7051c7b398baf2f5e08342da898a8c4996b1dc08f23310f480ae5538a3"
+    },
+    {
+      "source": "build/artifacts/nixl-mooncake-review-20261118/table.md",
+      "path": "historical-mooncake-76482/table.md",
+      "size": 233,
+      "sha256": "4be97bceb95ca89333de81e5c444effe6d021f02c8ec4c65493f66aa1deaa3c0"
+    },
+    {
+      "source": "build/artifacts/nixl-mooncake-review-20261118/comparison.pdf",
+      "path": "historical-mooncake-76482/comparison.pdf",
+      "size": 25549,
+      "sha256": "3ced13b2926103a17a9ebe88490a6bf0110d3125b7f5745b0d78af3ead31e376"
+    },
+    {
+      "source": "dcp_experiments/notes/nixl-mooncake-design.md",
+      "path": "historical-mooncake-76482/experiment-design.md",
+      "size": 3402,
+      "sha256": "bdf2f3695fde934b760b48951e77bf021d20a76c9dff1eebf47b88aadad1c4d9"
+    },
+    {
+      "source": "build/artifacts/nixl-review-revision-20261119/memory-layout-comparison.json",
+      "path": "validation/memory-layout-comparison.json",
+      "size": 707,
+      "sha256": "7a231199798e3d7728a92d33631adc82393d26a59a003fe04115a5acff961e2a"
+    },
+    {
+      "source": "build/artifacts/nixl-review-revision-20261119/gpu-77056/model/validation.json",
+      "path": "validation/deepseek-v2-lite-77056.json",
+      "size": 26461,
+      "sha256": "9e91fba04e90c7e45f342fa4f9c579900a394008234d301f5c0f40884eb9a62e"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-model-20261119/gpu-77219/shared/validation.json",
+      "path": "validation/deepseek-v3-same-order-77219.json",
+      "size": 1656,
+      "sha256": "a9a4191ee04302a5379699af16228fe6cd9442f0d5fae9e6c974c315d35a0e50"
+    },
+    {
+      "source": "build/artifacts/nixl-projection-model-20261119/gpu-77219/shared/run_manifest.json",
+      "path": "validation/deepseek-v3-same-order-manifest.json",
+      "size": 254461,
+      "sha256": "a73ca4990466f79201cf7ddf941acf8d155fac8033b323924c144c181c6a8654"
+    },
+    {
+      "source": "build/artifacts/nixl-closeout-20261124/cpu-tests-retry.log",
+      "path": "validation/closeout-cpu-tests.log",
+      "size": 615,
+      "sha256": "9f265c2da6459651d77afb89edfcf514105f9eda9a5fe96bcc2f46ce5b7e736d"
+    },
+    {
+      "source": "build/artifacts/nixl-closeout-20261124/cpu-tests.log",
+      "path": "validation/closeout-cpu-platform-prerequisite-failure.log",
+      "size": 21325,
+      "sha256": "1660d5a3be603cd7a05ea434b06a39be4b63aba1217e7c03c517ebb22a5978c9"
+    },
+    {
+      "source": "build/artifacts/nixl-closeout-20261124/precommit.log",
+      "path": "validation/closeout-precommit.log",
+      "size": 4938,
+      "sha256": "0b939cfba6ab0ac8e8655feea3497ee3914417d5b2bc0bd51d744f91f4a414f6"
+    },
+    {
+      "source": "build/artifacts/nixl-closeout-20261124/qualified-overlay-verification.json",
+      "path": "validation/qualified-overlay-verification.json",
+      "size": 3680,
+      "sha256": "d3e49c2599af13f7076326d41f5c7a6888e257496fa5bfa220571d3bcf62c1fa"
+    },
+    {
+      "path": "OVERVIEW.txt",
+      "source": "generated closeout overview",
+      "size": 2032,
+      "sha256": "83d81f3526c7d43ee9a1460b6c1922e4d1505ba35edb225b4037a6bf088294a0"
+    }
+  ]
+}

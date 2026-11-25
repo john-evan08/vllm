@@ -1,0 +1,437 @@
+..............sssssssssssss....................FFF...FFFFF........       [100%]
+=================================== FAILURES ===================================
+_ test_mla_nixl_rejects_conflicting_configuration[True-True-False-cannot both] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a5ed380800>
+tmp_path = PosixPath('/tmp/pytest-of-jkarcenty/pytest-22/test_mla_nixl_rejects_conflict0')
+direct = True, a2a = True, pcp = False, message = 'cannot both'
+
+    @pytest.mark.parametrize(
+        "direct,a2a,pcp,message",
+        [
+            (True, True, False, "cannot both"),
+            (False, False, False, "a2a backend"),
+            (False, True, True, "without PCP"),
+        ],
+    )
+    def test_mla_nixl_rejects_conflicting_configuration(
+        monkeypatch,
+        tmp_path,
+        direct,
+        a2a,
+        pcp,
+        message,
+    ):
+        from vllm.config import (
+            DeviceConfig,
+            ParallelConfig,
+            VllmConfig,
+            set_current_vllm_config,
+        )
+        from vllm.distributed.parallel_state import (
+            destroy_distributed_environment,
+            destroy_model_parallel,
+            init_distributed_environment,
+            initialize_model_parallel,
+        )
+    
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_NIXL_DCP_A2A", False)
+>       config = VllmConfig(
+            device_config=DeviceConfig(device="cpu"),
+            parallel_config=ParallelConfig(dcp_comm_backend="a2a" if a2a else "ag_rs"),
+        )
+
+tests/distributed/test_dcp_direct_a2a_lse_reduce.py:454: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vllm/config/vllm.py:2152: in __post_init__
+    current_platform.check_and_update_config(self)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'vllm.platforms.cpu.CpuPlatform'>
+vllm_config = VllmConfig(model_config=None, cache_config=CacheConfig(block_size=64, user_specified_block_size=False, kv_cache_layout..._transfer_config=None, watchdog_config=WatchdogConfig(timeout=300, check_interval=10, dump_dir=''), shutdown_timeout=0)
+
+    @classmethod
+    def check_and_update_config(cls, vllm_config: VllmConfig) -> None:
+        model_config = vllm_config.model_config
+    
+        # Import lazily: vllm.triton_utils imports vllm.platforms.current_platform,
+        # which is still being resolved while this platform class is loading.
+        from vllm.triton_utils import HAS_TRITON
+    
+        # Non-x86 CPUs without Triton use the standalone CPU model runner.
+        if cls.get_cpu_architecture() == CpuArchEnum.X86 and not HAS_TRITON:
+>           raise RuntimeError("vLLM on x86 CPUs requires Triton (triton-cpu).")
+E           RuntimeError: vLLM on x86 CPUs requires Triton (triton-cpu).
+
+vllm/platforms/cpu.py:245: RuntimeError
+------------------------------ Captured log call -------------------------------
+WARNING  vllm.platforms.cpu:cpu.py:678 Failed to import from vllm._C: ModuleNotFoundError("No module named 'vllm._C'")
+_ test_mla_nixl_rejects_conflicting_configuration[False-False-False-a2a backend] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a5ed3809b0>
+tmp_path = PosixPath('/tmp/pytest-of-jkarcenty/pytest-22/test_mla_nixl_rejects_conflict1')
+direct = False, a2a = False, pcp = False, message = 'a2a backend'
+
+    @pytest.mark.parametrize(
+        "direct,a2a,pcp,message",
+        [
+            (True, True, False, "cannot both"),
+            (False, False, False, "a2a backend"),
+            (False, True, True, "without PCP"),
+        ],
+    )
+    def test_mla_nixl_rejects_conflicting_configuration(
+        monkeypatch,
+        tmp_path,
+        direct,
+        a2a,
+        pcp,
+        message,
+    ):
+        from vllm.config import (
+            DeviceConfig,
+            ParallelConfig,
+            VllmConfig,
+            set_current_vllm_config,
+        )
+        from vllm.distributed.parallel_state import (
+            destroy_distributed_environment,
+            destroy_model_parallel,
+            init_distributed_environment,
+            initialize_model_parallel,
+        )
+    
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_NIXL_DCP_A2A", False)
+>       config = VllmConfig(
+            device_config=DeviceConfig(device="cpu"),
+            parallel_config=ParallelConfig(dcp_comm_backend="a2a" if a2a else "ag_rs"),
+        )
+
+tests/distributed/test_dcp_direct_a2a_lse_reduce.py:454: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vllm/config/vllm.py:2152: in __post_init__
+    current_platform.check_and_update_config(self)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'vllm.platforms.cpu.CpuPlatform'>
+vllm_config = VllmConfig(model_config=None, cache_config=CacheConfig(block_size=64, user_specified_block_size=False, kv_cache_layout..._transfer_config=None, watchdog_config=WatchdogConfig(timeout=300, check_interval=10, dump_dir=''), shutdown_timeout=0)
+
+    @classmethod
+    def check_and_update_config(cls, vllm_config: VllmConfig) -> None:
+        model_config = vllm_config.model_config
+    
+        # Import lazily: vllm.triton_utils imports vllm.platforms.current_platform,
+        # which is still being resolved while this platform class is loading.
+        from vllm.triton_utils import HAS_TRITON
+    
+        # Non-x86 CPUs without Triton use the standalone CPU model runner.
+        if cls.get_cpu_architecture() == CpuArchEnum.X86 and not HAS_TRITON:
+>           raise RuntimeError("vLLM on x86 CPUs requires Triton (triton-cpu).")
+E           RuntimeError: vLLM on x86 CPUs requires Triton (triton-cpu).
+
+vllm/platforms/cpu.py:245: RuntimeError
+_ test_mla_nixl_rejects_conflicting_configuration[False-True-True-without PCP] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a5ed363ad0>
+tmp_path = PosixPath('/tmp/pytest-of-jkarcenty/pytest-22/test_mla_nixl_rejects_conflict2')
+direct = False, a2a = True, pcp = True, message = 'without PCP'
+
+    @pytest.mark.parametrize(
+        "direct,a2a,pcp,message",
+        [
+            (True, True, False, "cannot both"),
+            (False, False, False, "a2a backend"),
+            (False, True, True, "without PCP"),
+        ],
+    )
+    def test_mla_nixl_rejects_conflicting_configuration(
+        monkeypatch,
+        tmp_path,
+        direct,
+        a2a,
+        pcp,
+        message,
+    ):
+        from vllm.config import (
+            DeviceConfig,
+            ParallelConfig,
+            VllmConfig,
+            set_current_vllm_config,
+        )
+        from vllm.distributed.parallel_state import (
+            destroy_distributed_environment,
+            destroy_model_parallel,
+            init_distributed_environment,
+            initialize_model_parallel,
+        )
+    
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_NIXL_DCP_A2A", False)
+>       config = VllmConfig(
+            device_config=DeviceConfig(device="cpu"),
+            parallel_config=ParallelConfig(dcp_comm_backend="a2a" if a2a else "ag_rs"),
+        )
+
+tests/distributed/test_dcp_direct_a2a_lse_reduce.py:454: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vllm/config/vllm.py:2152: in __post_init__
+    current_platform.check_and_update_config(self)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'vllm.platforms.cpu.CpuPlatform'>
+vllm_config = VllmConfig(model_config=None, cache_config=CacheConfig(block_size=64, user_specified_block_size=False, kv_cache_layout..._transfer_config=None, watchdog_config=WatchdogConfig(timeout=300, check_interval=10, dump_dir=''), shutdown_timeout=0)
+
+    @classmethod
+    def check_and_update_config(cls, vllm_config: VllmConfig) -> None:
+        model_config = vllm_config.model_config
+    
+        # Import lazily: vllm.triton_utils imports vllm.platforms.current_platform,
+        # which is still being resolved while this platform class is loading.
+        from vllm.triton_utils import HAS_TRITON
+    
+        # Non-x86 CPUs without Triton use the standalone CPU model runner.
+        if cls.get_cpu_architecture() == CpuArchEnum.X86 and not HAS_TRITON:
+>           raise RuntimeError("vLLM on x86 CPUs requires Triton (triton-cpu).")
+E           RuntimeError: vLLM on x86 CPUs requires Triton (triton-cpu).
+
+vllm/platforms/cpu.py:245: RuntimeError
+________________ test_nixl_config_accepts_multi_rank_groups[2] _________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a5ed36b620>
+dcp_size = 2
+
+    @pytest.mark.parametrize("dcp_size", [2, 8, 9, 16, 32])
+    def test_nixl_config_accepts_multi_rank_groups(monkeypatch, dcp_size):
+        """NIXL's qualification sizes must not impose a configuration ceiling."""
+        from vllm.config import DeviceConfig, ParallelConfig, VllmConfig
+    
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_NIXL_DCP_A2A", True)
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_DIRECT_DCP_A2A", False)
+>       config = VllmConfig(
+            device_config=DeviceConfig(device="cpu"),
+            parallel_config=ParallelConfig(
+                tensor_parallel_size=dcp_size,
+                decode_context_parallel_size=dcp_size,
+                dcp_comm_backend="a2a",
+                distributed_executor_backend="mp",
+            ),
+        )
+
+tests/distributed/test_dcp_direct_a2a_lse_reduce.py:516: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vllm/config/vllm.py:2152: in __post_init__
+    current_platform.check_and_update_config(self)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'vllm.platforms.cpu.CpuPlatform'>
+vllm_config = VllmConfig(model_config=None, cache_config=CacheConfig(block_size=64, user_specified_block_size=False, kv_cache_layout..._transfer_config=None, watchdog_config=WatchdogConfig(timeout=300, check_interval=10, dump_dir=''), shutdown_timeout=0)
+
+    @classmethod
+    def check_and_update_config(cls, vllm_config: VllmConfig) -> None:
+        model_config = vllm_config.model_config
+    
+        # Import lazily: vllm.triton_utils imports vllm.platforms.current_platform,
+        # which is still being resolved while this platform class is loading.
+        from vllm.triton_utils import HAS_TRITON
+    
+        # Non-x86 CPUs without Triton use the standalone CPU model runner.
+        if cls.get_cpu_architecture() == CpuArchEnum.X86 and not HAS_TRITON:
+>           raise RuntimeError("vLLM on x86 CPUs requires Triton (triton-cpu).")
+E           RuntimeError: vLLM on x86 CPUs requires Triton (triton-cpu).
+
+vllm/platforms/cpu.py:245: RuntimeError
+________________ test_nixl_config_accepts_multi_rank_groups[8] _________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a5ed34f620>
+dcp_size = 8
+
+    @pytest.mark.parametrize("dcp_size", [2, 8, 9, 16, 32])
+    def test_nixl_config_accepts_multi_rank_groups(monkeypatch, dcp_size):
+        """NIXL's qualification sizes must not impose a configuration ceiling."""
+        from vllm.config import DeviceConfig, ParallelConfig, VllmConfig
+    
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_NIXL_DCP_A2A", True)
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_DIRECT_DCP_A2A", False)
+>       config = VllmConfig(
+            device_config=DeviceConfig(device="cpu"),
+            parallel_config=ParallelConfig(
+                tensor_parallel_size=dcp_size,
+                decode_context_parallel_size=dcp_size,
+                dcp_comm_backend="a2a",
+                distributed_executor_backend="mp",
+            ),
+        )
+
+tests/distributed/test_dcp_direct_a2a_lse_reduce.py:516: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vllm/config/vllm.py:2152: in __post_init__
+    current_platform.check_and_update_config(self)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'vllm.platforms.cpu.CpuPlatform'>
+vllm_config = VllmConfig(model_config=None, cache_config=CacheConfig(block_size=64, user_specified_block_size=False, kv_cache_layout..._transfer_config=None, watchdog_config=WatchdogConfig(timeout=300, check_interval=10, dump_dir=''), shutdown_timeout=0)
+
+    @classmethod
+    def check_and_update_config(cls, vllm_config: VllmConfig) -> None:
+        model_config = vllm_config.model_config
+    
+        # Import lazily: vllm.triton_utils imports vllm.platforms.current_platform,
+        # which is still being resolved while this platform class is loading.
+        from vllm.triton_utils import HAS_TRITON
+    
+        # Non-x86 CPUs without Triton use the standalone CPU model runner.
+        if cls.get_cpu_architecture() == CpuArchEnum.X86 and not HAS_TRITON:
+>           raise RuntimeError("vLLM on x86 CPUs requires Triton (triton-cpu).")
+E           RuntimeError: vLLM on x86 CPUs requires Triton (triton-cpu).
+
+vllm/platforms/cpu.py:245: RuntimeError
+________________ test_nixl_config_accepts_multi_rank_groups[9] _________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a5ed34d610>
+dcp_size = 9
+
+    @pytest.mark.parametrize("dcp_size", [2, 8, 9, 16, 32])
+    def test_nixl_config_accepts_multi_rank_groups(monkeypatch, dcp_size):
+        """NIXL's qualification sizes must not impose a configuration ceiling."""
+        from vllm.config import DeviceConfig, ParallelConfig, VllmConfig
+    
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_NIXL_DCP_A2A", True)
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_DIRECT_DCP_A2A", False)
+>       config = VllmConfig(
+            device_config=DeviceConfig(device="cpu"),
+            parallel_config=ParallelConfig(
+                tensor_parallel_size=dcp_size,
+                decode_context_parallel_size=dcp_size,
+                dcp_comm_backend="a2a",
+                distributed_executor_backend="mp",
+            ),
+        )
+
+tests/distributed/test_dcp_direct_a2a_lse_reduce.py:516: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vllm/config/vllm.py:2152: in __post_init__
+    current_platform.check_and_update_config(self)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'vllm.platforms.cpu.CpuPlatform'>
+vllm_config = VllmConfig(model_config=None, cache_config=CacheConfig(block_size=64, user_specified_block_size=False, kv_cache_layout..._transfer_config=None, watchdog_config=WatchdogConfig(timeout=300, check_interval=10, dump_dir=''), shutdown_timeout=0)
+
+    @classmethod
+    def check_and_update_config(cls, vllm_config: VllmConfig) -> None:
+        model_config = vllm_config.model_config
+    
+        # Import lazily: vllm.triton_utils imports vllm.platforms.current_platform,
+        # which is still being resolved while this platform class is loading.
+        from vllm.triton_utils import HAS_TRITON
+    
+        # Non-x86 CPUs without Triton use the standalone CPU model runner.
+        if cls.get_cpu_architecture() == CpuArchEnum.X86 and not HAS_TRITON:
+>           raise RuntimeError("vLLM on x86 CPUs requires Triton (triton-cpu).")
+E           RuntimeError: vLLM on x86 CPUs requires Triton (triton-cpu).
+
+vllm/platforms/cpu.py:245: RuntimeError
+________________ test_nixl_config_accepts_multi_rank_groups[16] ________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a5ed3547a0>
+dcp_size = 16
+
+    @pytest.mark.parametrize("dcp_size", [2, 8, 9, 16, 32])
+    def test_nixl_config_accepts_multi_rank_groups(monkeypatch, dcp_size):
+        """NIXL's qualification sizes must not impose a configuration ceiling."""
+        from vllm.config import DeviceConfig, ParallelConfig, VllmConfig
+    
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_NIXL_DCP_A2A", True)
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_DIRECT_DCP_A2A", False)
+>       config = VllmConfig(
+            device_config=DeviceConfig(device="cpu"),
+            parallel_config=ParallelConfig(
+                tensor_parallel_size=dcp_size,
+                decode_context_parallel_size=dcp_size,
+                dcp_comm_backend="a2a",
+                distributed_executor_backend="mp",
+            ),
+        )
+
+tests/distributed/test_dcp_direct_a2a_lse_reduce.py:516: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vllm/config/vllm.py:2152: in __post_init__
+    current_platform.check_and_update_config(self)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'vllm.platforms.cpu.CpuPlatform'>
+vllm_config = VllmConfig(model_config=None, cache_config=CacheConfig(block_size=64, user_specified_block_size=False, kv_cache_layout..._transfer_config=None, watchdog_config=WatchdogConfig(timeout=300, check_interval=10, dump_dir=''), shutdown_timeout=0)
+
+    @classmethod
+    def check_and_update_config(cls, vllm_config: VllmConfig) -> None:
+        model_config = vllm_config.model_config
+    
+        # Import lazily: vllm.triton_utils imports vllm.platforms.current_platform,
+        # which is still being resolved while this platform class is loading.
+        from vllm.triton_utils import HAS_TRITON
+    
+        # Non-x86 CPUs without Triton use the standalone CPU model runner.
+        if cls.get_cpu_architecture() == CpuArchEnum.X86 and not HAS_TRITON:
+>           raise RuntimeError("vLLM on x86 CPUs requires Triton (triton-cpu).")
+E           RuntimeError: vLLM on x86 CPUs requires Triton (triton-cpu).
+
+vllm/platforms/cpu.py:245: RuntimeError
+________________ test_nixl_config_accepts_multi_rank_groups[32] ________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a5ed34fdd0>
+dcp_size = 32
+
+    @pytest.mark.parametrize("dcp_size", [2, 8, 9, 16, 32])
+    def test_nixl_config_accepts_multi_rank_groups(monkeypatch, dcp_size):
+        """NIXL's qualification sizes must not impose a configuration ceiling."""
+        from vllm.config import DeviceConfig, ParallelConfig, VllmConfig
+    
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_NIXL_DCP_A2A", True)
+        monkeypatch.setattr(dcp.envs, "VLLM_USE_DIRECT_DCP_A2A", False)
+>       config = VllmConfig(
+            device_config=DeviceConfig(device="cpu"),
+            parallel_config=ParallelConfig(
+                tensor_parallel_size=dcp_size,
+                decode_context_parallel_size=dcp_size,
+                dcp_comm_backend="a2a",
+                distributed_executor_backend="mp",
+            ),
+        )
+
+tests/distributed/test_dcp_direct_a2a_lse_reduce.py:516: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vllm/config/vllm.py:2152: in __post_init__
+    current_platform.check_and_update_config(self)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'vllm.platforms.cpu.CpuPlatform'>
+vllm_config = VllmConfig(model_config=None, cache_config=CacheConfig(block_size=64, user_specified_block_size=False, kv_cache_layout..._transfer_config=None, watchdog_config=WatchdogConfig(timeout=300, check_interval=10, dump_dir=''), shutdown_timeout=0)
+
+    @classmethod
+    def check_and_update_config(cls, vllm_config: VllmConfig) -> None:
+        model_config = vllm_config.model_config
+    
+        # Import lazily: vllm.triton_utils imports vllm.platforms.current_platform,
+        # which is still being resolved while this platform class is loading.
+        from vllm.triton_utils import HAS_TRITON
+    
+        # Non-x86 CPUs without Triton use the standalone CPU model runner.
+        if cls.get_cpu_architecture() == CpuArchEnum.X86 and not HAS_TRITON:
+>           raise RuntimeError("vLLM on x86 CPUs requires Triton (triton-cpu).")
+E           RuntimeError: vLLM on x86 CPUs requires Triton (triton-cpu).
+
+vllm/platforms/cpu.py:245: RuntimeError
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/torch/jit/_script.py:365: 14 warnings
+  /auto/swgwork1/jkarcenty/projects/dcp_opti/nixl/vllm/.venv/lib/python3.12/site-packages/torch/jit/_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/distributed/test_dcp_direct_a2a_lse_reduce.py::test_mla_nixl_rejects_conflicting_configuration[True-True-False-cannot both]
+FAILED tests/distributed/test_dcp_direct_a2a_lse_reduce.py::test_mla_nixl_rejects_conflicting_configuration[False-False-False-a2a backend]
+FAILED tests/distributed/test_dcp_direct_a2a_lse_reduce.py::test_mla_nixl_rejects_conflicting_configuration[False-True-True-without PCP]
+FAILED tests/distributed/test_dcp_direct_a2a_lse_reduce.py::test_nixl_config_accepts_multi_rank_groups[2]
+FAILED tests/distributed/test_dcp_direct_a2a_lse_reduce.py::test_nixl_config_accepts_multi_rank_groups[8]
+FAILED tests/distributed/test_dcp_direct_a2a_lse_reduce.py::test_nixl_config_accepts_multi_rank_groups[9]
+FAILED tests/distributed/test_dcp_direct_a2a_lse_reduce.py::test_nixl_config_accepts_multi_rank_groups[16]
+FAILED tests/distributed/test_dcp_direct_a2a_lse_reduce.py::test_nixl_config_accepts_multi_rank_groups[32]
+8 failed, 45 passed, 13 skipped, 23 deselected, 14 warnings in 25.67s

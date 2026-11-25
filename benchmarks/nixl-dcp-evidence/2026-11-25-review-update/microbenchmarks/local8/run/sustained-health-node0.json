@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "scope": "Full-allocation sampled telemetry; normal power caps allowed",
+  "devices": {
+    "0": {
+      "samples": 246,
+      "max_temperature_c": 49
+    },
+    "1": {
+      "samples": 246,
+      "max_temperature_c": 53
+    },
+    "2": {
+      "samples": 246,
+      "max_temperature_c": 62
+    },
+    "3": {
+      "samples": 246,
+      "max_temperature_c": 60
+    },
+    "4": {
+      "samples": 246,
+      "max_temperature_c": 50
+    },
+    "5": {
+      "samples": 246,
+      "max_temperature_c": 47
+    },
+    "6": {
+      "samples": 246,
+      "max_temperature_c": 61
+    },
+    "7": {
+      "samples": 246,
+      "max_temperature_c": 62
+    }
+  },
+  "faults": []
+}

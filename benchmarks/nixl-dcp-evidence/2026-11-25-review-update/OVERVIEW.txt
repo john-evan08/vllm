@@ -1,0 +1,34 @@
+NIXL DCP closeout evidence — prepared, not published
+
+Implementation commit: 809dd16e952aa155b658d895e5f58929addc5f3b.
+GPU measurements retain their original base/overlay/runtime provenance.
+
+microbenchmarks/: completed mixed DCP16 (77121) and local DCP8 (77128).
+Both measure projection+exchange+combine, with forced NIXL before/after arms.
+The local experiment also includes unchanged symmetric P2P. Per-rank timing,
+correctness and topology records are retained. All saved summary metrics were
+reproduced exactly by a fresh analyzer run. The reports' statement that the
+production policy was not selected describes their historical run date; the
+new implementation adopts upstream NCCL's threshold-8 heuristic.
+
+historical-mooncake-76482/: completed eight-cell full-trace serving comparison.
+This older implementation exchanges latent outputs; do not attribute these
+results to the new threshold-8 implementation. Prefix caching was enabled;
+each cell replays all3250 requests. One physical pair,two repeats per backend.
+
+validation/: preserved bounded model correctness checks, memory calculation,
+and fresh local checks. Same-order NIXL/NCCL comparisons pass; the full original
+cross-order BF16 result is retained in the validation report and must not be
+described as passing task-accuracy equivalence. See each source report's scope.
+
+PENDING: no final projection-model performance results are included. Add only
+the complete accepted12-cell report from one healthy pair. No measurements
+from rejected/partial allocations are represented as final results here.
+
+Reproduce microbenchmark summaries using reproduction/analyze_nixl_projection.py
+against a run root containing benchmark/rank*.jsonl, provenance.txt,
+job-complete and health summaries. These are retained under each raw/ and run/
+directory. The plots and numeric tables are unchanged copies of reviewed output.
+Fresh runtime measurements require the pinned image/source/harness/hardware.
+
+AI assistance: OpenAI Codex prepared the evidence package and validation.

@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "comparisons": {
+    "before": {
+      "prompts": 9,
+      "exact_generations": 9,
+      "comparable_steps": 288,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    },
+    "after": {
+      "prompts": 9,
+      "exact_generations": 9,
+      "comparable_steps": 288,
+      "max_logprob_delta": 0.0,
+      "prompt_mean_logprob_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_divergences": [],
+      "tolerances": {
+        "max_logprob_delta": 0.5,
+        "per_prompt_mean_logprob_delta": 0.1,
+        "first_divergence_greedy_gap": 0.25
+      }
+    }
+  },
+  "same_order_outputs_and_logprobs_exact": true,
+  "nccl_restoration_exact": true,
+  "cross_order": {
+    "passed_original_gate": false,
+    "error": "Prompt 1, token 21: logprob delta 0.5285308957099915 > 0.5"
+  },
+  "cross_order_difference_accepted_for_performance": true,
+  "authorization": "User explicitly confirmed performance comparison after diagnostic77210 on2026-11-20; this is not task-quality qualification.",
+  "scope": "Same initialized model and communicators; exact same-order transport comparisons and unchanged numerical bounds; nine sequential probes and batch16/64 dispatch traces. Timing uses fresh single-policy servers."
+}
